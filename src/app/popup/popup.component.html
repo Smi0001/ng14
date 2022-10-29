@@ -1,1 +1,37 @@
-<p>popup works!</p>
+<div class="overlay">
+    <div class="modal disp-flex column">
+        <div (click)="closePopup()" class="close-icon">
+            <span>x</span>
+        </div>
+        <div class="modal-title">Please enter your details below</div>
+        <div class="modal-body">
+            <form [formGroup]="formfield" (ngSubmit)="onSubmit()">
+                <div class="form-div {{ phone.value ? 'has-value': ''}}">
+                    <span class="prefix">+91</span>
+                    <label for="phone" class="label">Phone Number</label>
+                    <input formControlName="phone" type="phone" name="phone" class="input-field phone" placeholder="Phone Number" />
+                    <span *ngIf="phone.valid && phone.value" class="done"><img src="../../assets/img/icons8-done-64.png" /></span>
+                </div>
+                <div class="form-div {{ pan.value ? 'has-value': ''}}">
+                    <label for="pan" class="label">PAN Card Number</label>
+                    <input formControlName="pan" type="text" name="pan" class="input-field" placeholder="PAN Card Number" />
+                    <!-- <span *ngIf="pan.valid && pan.value" class="done"><img src="../../assets/img/icons8-done-64.png" /></span> -->
+                </div>
+                <div class="form-div {{ name.value ? 'has-value': ''}}">
+                    <label for="name" class="label">Name as in PAN Card</label>
+                    <input formControlName="name" type="text" name="name" class="input-field" placeholder="Name as in PAN Card" />
+                    <!-- <span *ngIf="name.valid && name.value" class="done"><img src="../../assets/img/icons8-done-64.png" /></span> -->
+                </div>
+                <div class="form-div {{ email.value ? 'has-value': ''}}">
+                    <label for="email" class="label">Email</label>
+                    <input formControlName="email" type="email" name="email" class="input-field" placeholder="Email" />
+                    <span *ngIf="email.valid && email.value" class="done"><img src="../../assets/img/icons8-done-64.png" /></span>
+                </div>
+                <div class="modal-footer disp-flex row just-s-btwn">
+                    <button type="button" (click)="closePopup()" class="cancel">Cancel</button>
+                    <button type="submit" class="activate">Activate Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

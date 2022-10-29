@@ -1,1 +1,23 @@
-<p>card works!</p>
+
+<div class="card disp-flex column just-s-btwn">
+    <div class="card-title">
+        <div class="tick">
+            <img src="../../assets/img/icons8-done-white.svg" />
+        </div>
+        <div>Now pay your <br/>fee monthly @</div>
+    </div>
+    <div class="card-body disp-flex row">
+        <div class="big-text">0%</div>
+        <div class="small-text">Interest <br/> pre-approved credit line</div>
+    </div>
+    <div class="card-footer disp-flex row">
+        <div class="footer-text disp-flex column">
+            <div>Annual Fee</div>
+            <div class="big-text">₹ 3,40,000</div>
+        </div>
+        <button type="button" (click)="togglePopup(true)">Activate Now</button>
+    </div>
+</div>
+<ng-template [ngIf]="popupStatus">
+    <app-popup (closeEvent)="togglePopup($event)"></app-popup>
+</ng-template>

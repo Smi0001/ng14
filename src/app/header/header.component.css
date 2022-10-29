@@ -1,0 +1,24 @@
+.header {
+    background-image: linear-gradient(90deg, #E06E7C, #FC9C74);
+    margin: -10px;
+    border-bottom-left-radius: 50px;
+    padding: 24px;
+    height: 75px;
+}
+.header-icon {
+    background-color: #F5F7FC;
+    height: 30px;
+    width: 30px;
+    border: 5px solid white;
+    border-radius: 100%;
+}
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.header-title {
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+}

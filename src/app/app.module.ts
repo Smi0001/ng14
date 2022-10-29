@@ -7,9 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { CardComponent } from './card/card.component';
-import { ButtonComponent } from './button/button.component';
 import { PopupComponent } from './popup/popup.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     ProfileCardComponent,
     CardComponent,
-    ButtonComponent,
     PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
